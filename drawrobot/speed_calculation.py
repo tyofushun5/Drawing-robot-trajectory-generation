@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-
 W = 0.146
 scale = 0.001
 

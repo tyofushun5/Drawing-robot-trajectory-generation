@@ -1,13 +1,21 @@
+import os
+
 import cv2 as cv
 import numpy as np
 import pandas as pd
 
 
+script_dir = os.path.dirname(__file__)
+parent_dir = os.path.dirname(script_dir)
+img_dir = os.path.join(script_dir, 'images')
+image_filename = 'git.png' #Your image filename
+image_path = os.path.join(parent_dir, img_dir, image_filename)
+
 desired_points = 800
 scale = 1
 dt_per_point = 0.05
 
-img = cv.imread('git.png')
+img = cv.imread(image_path)
 
 img = cv.resize(img, (600, 600))
 H, W, _ = img.shape
